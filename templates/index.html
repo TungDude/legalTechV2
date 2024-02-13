@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}">
+    <script src="{{ url_for('static', filename='script/indexScript.js')}}"></script>
+</head>
 </head>
 <body>
+    <div class="center">
+        <h1>Carbon Credit Calculator</h1>
+        <div style="display: inline;">
+            <label for="subPlane">กรอกจำนวนแปลงย่อย</label><input class="subPlaneInput" type="number" id="subPlane" name="subPlane">
+            <button style="margin-left: 10px;" onclick="subPlaneInput()">Submit</button>
+        </div>
+    </div>
+
+    <div id="subPlaneContainer" class="center">
+
+    </div>
     
 </body>
 </html>
