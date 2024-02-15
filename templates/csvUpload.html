@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}">
+    <script src="{{ url_for('static', filename='script/indexScript.js')}}"></script>
+</head>
+<body>
+    <div class="center">
+        <h1>ผลลัพท์จากการประมวลผลภาพถ่ายดาวเทียม</h1>
+        <p>ทั้งหมด {{ parameters }} ชั้นภูมิ</p>
+        <p>ชั้นภูมิที่ 1: แปลงที่ 1, 3, 4</p>
+        <p>ชั้นภูมิที่ 2: แปลงที่ 2</p><br>
+        <div style="border: 3px solid black;">
+            <h1>Upload CSV/ Excel File</h1>
+            <div style="text-align: left; width: 60%;" class="center">        
+                <p style="color: red;">*ข้อมูลที่ต้องมีในไฟล์</p>
+                <p style="color: red;">1. H - ส่วนสูงต้นไม้ทั้งหมด (m)</p>
+                <p style="color: red;">2. D - เส้นผ่านศูนย์กลางลำต้นที่สูงกว่า 1.3 ม. (cm)</p>
+                <p style="color: red;">3. i - ชั้นภูมิ</p>
+                <p style="color: red;">4. j - ชนิดพรรณไม้</p>
+            </div>
+            <form action="/resultM2" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input class="uploadButton" type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

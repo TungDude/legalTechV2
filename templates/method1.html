@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}">
+</head>
+<body>
+    <div class="center">
+        <h1>การประเมินการกักเก็บคารบ์อนจากการนับจำนวนต้นไม้</h1>
+        <p style="color:red;">{{ ERROR }}</p>
+        <form action="/resultM1" method="post" enctype="multipart/form-data">
+            <label for="T">จำนวนต้นไม้ในพื้นที่โครงการทั้งหมด (ต้น): </label><input type="number" id="T" name="T">
+            <label for="t">ปีที่ดำเนินการติดตามผล (ปี) : </label><input type="number" id="t" name="t"><br><input class="calculateButton" type="submit" value="Calculate">
+        </form>
+    </div>
+    
+</body>
+</html>

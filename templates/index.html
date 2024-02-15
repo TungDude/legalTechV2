@@ -12,14 +12,16 @@
 <body>
     <div class="center">
         <h1>Carbon Credit Calculator</h1>
-        <div style="display: inline;">
-            <label for="subPlane">กรอกจำนวนแปลงย่อย</label><input class="subPlaneInput" type="number" id="subPlane" name="subPlane">
-            <button style="margin-left: 10px;" onclick="subPlaneInput()">Submit</button>
+        <div style="display: inline;"></div>
+            <form id="subPlaneForm" action="/calculate" method="post" enctype="multipart/form-data">
+                <label for="subPlane">กรอกจำนวนแปลงย่อย</label><input onchange="subPlaneInput()" class="subPlaneInput" type="number" id="subPlaneNo" name="subPlaneNo">
+                <p style="color:red;">{{ ERROR }}</p>
+
+                <div id="subPlaneContainer">
+
+                </div>
+            </form>
         </div>
-    </div>
-
-    <div id="subPlaneContainer" class="center">
-
     </div>
     
 </body>
