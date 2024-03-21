@@ -15,16 +15,16 @@
         <br>
         <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}"></img>
             <h3>ผลการวิเคราะห์ค่าการกักเก็บคาร์บอนในปีปัจจุบัน</h3>
-            <h2 style="background-color:white; border-radius: 5px;">{{ result }}</h2>
+            <h2 style="background-color:white; border-radius: 5px;">{{ result }} ตัน</h2>
         <small>ประมาณการค่าอีก 10 ปีข้างหน้า</small>
         <canvas id="prediction" style="width:100%;"></canvas>
         <p style="background-color:white; border-radius: 15px;padding-top: 10px; padding-bottom: 10px"><b>คำแนะนำ</b><br>
             ควรรับการตรวจประเมินในปีที่ 3, 6, 10<br>
             ซึ่งจะได้เครดิตประมาณ<br><br>
-            180 - 13.11 = 166.89 มูลค่า 83,445 บาท<br>
-            360 - 180 = 180 มูลค่า 90,000 บาท<br>
-            600 - 360 = 240 มูลค่า 120,000 บาท<br><br>
-            คิดเป็นมูลค่ารวมประมาณ 293,445 บาท</p>
+            ปีที่ 3: {{ 180 - result }} ตัน มูลค่า {{ 500 * (180 - result) }} บาท<br>
+            ปีที่ 6: 180 ตัน มูลค่า 90,000.0 บาท<br>
+            ปีที่ 10: 240 ตัน มูลค่า 120,000.0 บาท<br><br>
+            คิดเป็นมูลค่ารวมประมาณ {{ 210000 + (500 * (180 - result)) }} บาท</p>
         <button class="inner-upperright" id="backButton" onclick="Back()">Back</button>
     </div>
     
