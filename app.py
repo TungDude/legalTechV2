@@ -71,18 +71,21 @@ def calculate():
         return render_template('method2.html')
 
 @app.route('/resultM1', methods=['POST'])
-def result1():
+def analysis():
     try:
         T = float(request.form['T'])
         t = float(request.form['t'])
         MAI = 9.5
 
         result = T * t * MAI * 0.001
+        data = [(str(i + 1), (i + 1) * 60) for i in range(0, 10)]
+        labels = [row[0] for row in data]
+        values = [row[1] for row in data]
     except Exception as e:
         print(e)
         return render_template('method1.html', ERROR = "กรุณากรอกข้อมูลให้ครบ")
     
-    return render_template('result.html', result=result)
+    return render_template('analysis.html', result=result, labels=labels, values=values)
 
 @app.route('/M2csv', methods=['POST'])
 def M2image():
