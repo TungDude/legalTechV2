@@ -11,9 +11,9 @@
 <body>
     <div class="center" style="width: 80%;">
         <h1>ผลลัพท์จากการประมวลผลภาพถ่ายดาวเทียม</h1>
-        <p>ทั้งหมด {{ parameters }} ชั้นภูมิ</p>
-        <p>ชั้นภูมิที่ 1: แปลงที่ 1, 3, 4</p>
-        <p>ชั้นภูมิที่ 2: แปลงที่ 2</p><br>
+        <p>กรุณาเก็บข้อมูลต้นไม้จากตัวอย่าง </p>
+        <p style="font-weight: bold; font-size: 18px;">{{ parameters }} แปลง</p>
+        <p>โดยแต่ละแปลงมีขนาด 40x40 เมตร</p><br>
         <div style="border: 3px solid black;">
             <h1>กรอกข้อมูลให้ครบถ้วน</h1>
             <small style="color: red">( เฉพาะต้นไม้ที่สูงกว่า 1.3 เมตร)</small>
@@ -32,7 +32,7 @@
                         <th>จำนวน</th>
                         <th>ส่วนสูง</th>
                         <th>เส้นผ่านศูนย์กลาง</th>
-                        <th>ชั้นภูมิ</th>
+                        <th>แปลงตัวอย่าง</th>
                         <th>ชนิดพรรณไม้</th>
                     </tr>
                     <tr>
@@ -41,7 +41,7 @@
                         <td onkeypress = "return testCharacter(event);" contenteditable="true"></td>
                         <td>
                             <select name="level" id="level" style="width: 80%; max-width: 150px; font-size: 12px;">
-                                <option value="" selected disabled hidden>เลือกชั้นภูมิ</option>"
+                                <option value="" selected disabled hidden>ตัวอย่างที่</option>"
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                             </select>

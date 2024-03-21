@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultStyles.css') }}">
+    <script src="{{ url_for('static', filename='script/analysis.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="generatePrediction({{ labels }}, {{ values }})">
+    <div class="center">
+        <br>
+        <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}"></img>
+            <h3>ผลการวิเคราะห์ค่าการกักเก็บคาร์บอนในปีปัจจุบัน</h3>
+            <h2 style="background-color:white; border-radius: 5px;">{{ result }}</h2>
+        <small>ประมาณการค่าอีก 10 ปีข้างหน้า</small>
+        <canvas id="prediction" style="width:100%;"></canvas>
+        <p style="background-color:white; border-radius: 15px;padding-top: 10px; padding-bottom: 10px"><b>คำแนะนำ</b><br>
+            ควรรับการตรวจประเมินในปีที่ 3, 6, 10<br>
+            ซึ่งจะได้เครดิตประมาณ<br><br>
+            180 - 13.11 = 166.89 มูลค่า 83,445 บาท<br>
+            360 - 180 = 180 มูลค่า 90,000 บาท<br>
+            600 - 360 = 240 มูลค่า 120,000 บาท<br><br>
+            คิดเป็นมูลค่ารวมประมาณ 293,445 บาท</p>
+        <button class="inner-upperright" id="backButton" onclick="Back()">Back</button>
+    </div>
+    
+    
+</body>
+</html>
