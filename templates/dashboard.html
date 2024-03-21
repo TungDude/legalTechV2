@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}">
+    <script src="{{ url_for('static', filename='script/dashboard.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body onload="generateChart({{ labels }}, {{ values }})">
+    <div class="upperright">
+        <div class="inner-upperright">
+            <button class="inner-upperright" id="logOutButton" onclick="back()">Back</button>
+        </div>
+    </div>
+    <div class="center">
+        <br>
+        <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}"></img>
+        <h1>Carbon credit ปัจจุบันของคุณ</h1>
+        <h1>380</h1>
+        <canvas id="lineChart" style="width: 100%"></canvas>
+    </div>
+</body>
+</html>

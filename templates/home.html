@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/indexStyles.css') }}" />
+    <script src="{{ url_for('static', filename='script/homeScript.js') }}"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="upperright">
+        <div class="inner-upperright">
+            <button class="inner-upperright" id="logOutButton" onclick="Logout()">Logout</button>
+        </div>
+    </div>
+    <div class="center">
+        <br>
+        <img class="logo-img" src="{{ url_for('static', filename='img/logo.png') }}"></img>
+        <h1>Welcome, admin</h1>
+        <button onclick="calculator()" style="width: 40%; font-size: 14px; margin: 5px;">คำนวน Carbon Credit</button><br>
+        <button onclick="dashboard()" style="width: 40%; font-size: 14px; margin: 5px;">ประวัติของคุณ</button>
+    </div>
+</body>
+</html>
