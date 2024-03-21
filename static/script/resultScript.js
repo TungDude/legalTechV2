@@ -1,4 +1,4 @@
 async function Back(){
     event.preventDefault();
-    window.location.href = "/";
+    window.location.href = "/home";
 }

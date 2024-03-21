@@ -10,3 +10,8 @@ async function subPlaneInput() {
 
     subPlaneContainer.innerHTML += '<br><input style="width: 80px; height: 35px; font-size: 16px;" class="calculateButton" type="submit" value="Submit">'
 }
+
+async function back() {
+    event.preventDefault();
+    window.location.href = "/home";
+}
