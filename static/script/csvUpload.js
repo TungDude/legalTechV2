@@ -17,7 +17,7 @@ async function addRow() {
     td3.name = 'td' + toString(rowNo) + '2';
     td4.name = 'td' + toString(rowNo) + '3';
     td5.name = 'td' + toString(rowNo) + '4';
-    td4.innerHTML = '<select name="level" id="level" style="width: 80%; max-width: 150px; font-size: 12px;"><option value="" selected disabled hidden>เลือกชั้นภูมิ</option><option value="1">1</option><option value="2">2</option></select>';
+    td4.innerHTML = '<select name="level" id="level" style="width: 80%; max-width: 150px; font-size: 12px;"><option value="" selected disabled hidden>ตัวอย่างที่</option><option value="1">1</option><option value="2">2</option></select>';
     td5.innerHTML = '<select name="plants" id="plants" style="width: 100%; font-size: 12px; max-width: 150px;"><option value="" selected disabled hidden>เลือกพรรณไม้</option>"<option value="ปาล์ม">ปาล์ม</option><option value="ป่าดิบแล้ง">ป่าดิบแล้ง</option><option value="เถาวัลย์">เถาวัลย์</option><option value="พรรณไม้ชายเลน">พรรณไม้ชายเลน</option></select>';
     row.appendChild(td1);
     row.appendChild(td2);

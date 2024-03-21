@@ -1,5 +1,5 @@
-async function generateChart(labels, values) {
-    var ctx = document.getElementById('lineChart');
+async function generatePrediction(labels, values) {
+    var ctx = document.getElementById('prediction');
     var lineChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -26,6 +26,6 @@ async function generateChart(labels, values) {
     })
 }
 
-async function back() {
+async function Back() {
     window.location.href = "/home";
 }
